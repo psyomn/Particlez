@@ -13,15 +13,13 @@
 #define MINZ STDMIN
 
 // Simulation 
-#define CYCLES 9000
+#define CYCLES 99000
 #define STEPSIZE 1
 
 // OpenGL stuff
 #define WINDOW_WIDTH 300
 #define WINDOW_HEIGHT 300
-#define RED
-#define BLUE
-#define GREEN
-#define CYAN
-#define MAGENTA
+#define COLORMAX 255
 
+// OpenGL - simulation specific
+#define PARTICLE_RADIUS 2
