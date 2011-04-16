@@ -1,5 +1,5 @@
 // Particle Info
-#define PARTICLES 100
+#define PARTICLES 300
 #define GROUP 5
 
 // Room stats
@@ -13,7 +13,7 @@
 #define MINZ STDMIN
 
 // Simulation 
-#define CYCLES 99000
+#define CYCLES 100000
 #define STEPSIZE 1
 
 // OpenGL stuff

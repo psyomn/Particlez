@@ -18,7 +18,18 @@ void oppositeGroup(unsigned int* og){
 		case 3: *og = 0; break;
 		case 4: *og = 1; break;
 		case 5: *og = 2; break;
+		default: break;
 	}
+}
+/** @return true if collided
+@return false if not...
+*/
+int ballsTouching(struct Particle *o, struct Particle *oo){
+	return (
+		o->x == oo->x &&
+		o->y == oo->y &&
+		o->z == oo->z 
+	);
 }
 
 /** These are the reaction rules for the particles */

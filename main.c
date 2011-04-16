@@ -1,6 +1,4 @@
-/* @author Simon Symeonidis
-Particle Simulator for COMP 426
-*/
+/* @author Simon Symeonidis */
 #include <stdio.h>
 #include <time.h>
 #include <GL/glut.h>
@@ -12,8 +10,15 @@ int PRINTING = 1;
 #include "macros.h"
 #include "structs.h"
 #include "func.h"
+#include "glfunc.h"
+
+void render(void);
 
 int main(int argc, char** argv){
+	render();
+}
+
+void render(void){
 	struct Particle part[PARTICLES];	
 	int i; // loop
 	int j; // loop
@@ -65,8 +70,9 @@ int main(int argc, char** argv){
 			//Check with the rest of particles for collisions
 			for (k=j+1; k<PARTICLES; ++k){
 				// Reaction / Particle Collision
-				if ( part[j].x == part[k].x && part[j].y == part[k].y && part[j].z == part[k].z) { 
+				if (ballsTouching(&part[j], &part[k])) { 
 					particleReaction(&part[j], &part[k]);
+					printf("Particle Collision!\n");
 				}
 				// Wall Collision
 				if(	part[j].x > MAXX || part[j].y > MAXY || part[j].z > MAXZ ||
@@ -99,6 +105,5 @@ int main(int argc, char** argv){
 		}
 		printf("Total Particles : %d\n", k);
 	}
+
 }
-
-
