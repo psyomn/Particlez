@@ -3,7 +3,6 @@
 #include <time.h>
 #include <GL/glut.h>
 
-// This is here to guard the random seed
 int sw = 0;
 int PRINTING = 1;
 
