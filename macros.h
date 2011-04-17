@@ -1,5 +1,5 @@
 // Particle Info
-#define PARTICLES 300
+#define PARTICLES 100
 #define GROUP 5
 
 // Room stats
